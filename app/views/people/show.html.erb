@@ -1,4 +1,5 @@
 <title>Lurk.it - <%= full_name(@person.firstname, @person.lastname)%></title>
-<h1><%= twitter_url(@person.twittername)%></h1>
+<h1><%= link_to "@#{@person.twittername}", twitter_url(@person.twittername)%></h1>
 <h1><%= tumblr_url(@person.tumblrname)%></h1>
 <%= link_to "Latest Tumblr Post",`helper_scripts/tumblrget.rb #{@person.tumblrname}`, :confirm => "Are you sure?"%>
+<%= link_to "Back", :action => 'list'%>
