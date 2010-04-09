@@ -43,4 +43,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :cities
   map.resources :people
   map.resources :sites
+  map.root :controller => 'people', :action => 'index'
 end
