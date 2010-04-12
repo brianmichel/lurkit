@@ -44,4 +44,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :people
   map.resources :sites
   map.root :controller => 'people', :action => 'index'
+  map.connect ':id', 
+            :controller =>  'people',
+            :action     =>  'show',
+            :id         =>  :id  
 end
