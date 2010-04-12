@@ -19,4 +19,9 @@ module ApplicationHelper
   def linkedin_url(linkedinname)
     "http://www.linkedin.com/in/#{linkedinname}"
   end
+  
+  def population(cityid)
+    city = City.find(:first, :conditions => {:id => "#{cityid}"})
+    city.people.count
+  end
 end
