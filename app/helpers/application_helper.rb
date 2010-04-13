@@ -24,4 +24,8 @@ module ApplicationHelper
     city = City.find(:first, :conditions => {:id => "#{cityid}"})
     city.people.count
   end
+  
+  def lurkit_url(userid)
+    "http://www.lurk.it/#{userid}"
+  end
 end
