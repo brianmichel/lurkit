@@ -1,21 +1,22 @@
-<p>
-	<label for="firstname">First Name</label>:
-	<%= text_field 'person', 'firstname' %>
-</p>
-<p>
-	<label for="lastname">Last Name</label>:
-	<%= text_field 'person', 'lastname' %>
-</p>
-<p>
-	<label for="twittername">http://www.twitter.com/</label>
-	<%= text_field 'person', 'twittername' %>
-</p>
-<p>
-	<label for="tumblrname">http://<label>
-	<%= text_field 'person', 'tumblrname' %>
-	<label for "tumblrname">.tumblr.com/</label>
-</p>
-<p>
-	<label for="homecity">Home City</label>:
-	<%= collection_select(:person, :city_id, City.all, :id, :name, {:prompt => "Select City"})%>
-</p>
+<div id="formcontrols">
+	<p>
+		<label for="firstname">First Name:</label>
+		<%= text_field 'person', 'firstname' %>
+	</p>
+	<p>
+		<label for="lastname">Last Name:</label>
+		<%= text_field 'person', 'lastname' %>
+	</p>
+	<p>
+		<label for="twittername">Twitter:</label>
+		<%= text_field 'person', 'twittername' %>
+	</p>
+	<p>
+		<label for="tumblrname">Tumblr:</label>
+		<%= text_field 'person', 'tumblrname' %>
+	</p>
+	<p>
+		<label for="city_id">Home City</label>:
+		<%= collection_select(:person, :city_id, City.all, :id, :name, {:prompt => "Select City"})%>
+	</p>
+</div>
