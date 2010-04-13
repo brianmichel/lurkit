@@ -1,5 +1,20 @@
 <title>Lurk.it - <%= full_name(@person.firstname, @person.lastname)%></title>
-<h1><%= link_to "@#{@person.twittername}", twitter_url(@person.twittername)%></h1>
-<h1><%= tumblr_url(@person.tumblrname)%></h1>
-<%= link_to "Latest Tumblr Post",`helper_scripts/tumblrget.rb #{@person.tumblrname}`, :confirm => "Are you sure?"%>
-<%= link_to "Back", :action => 'list'%>
+<div id="header">
+	<span class="fullname"><%= full_name(@person.firstname, @person.lastname)%></span><br>
+	<span class="lurkiturl"><%= lurkit_url(@person.id) %></span>
+</div>
+<div id="sites">
+	<span class="twitter"><%= link_to "@#{@person.twittername}", twitter_url(@person.twittername)%></span><br>
+	<span class="tumblr"><%= tumblr_url(@person.tumblrname)%> - <%= link_to "Latest Tumblr Post",`helper_scripts/tumblrget.rb #{@person.tumblrname}`, :confirm => "Are you sure?"%></span>
+</div>
+<% if @person.city.name %>
+		<span class="cityname"><%= @person.city.name %></span>
+		<span class="population">(<%= population(@person.city.id)%>)</span>
+<% else %>
+		oops no city listed!
+<% end%>
+
+<div id="navigation">
+	<%= link_to "Back", :action => 'list'%>
+	<%= link_to "Edit", :action => 'edit', :id => @person.id%>
+</div>
