@@ -1,0 +1,103 @@
+/* @override http://localhost:3000/stylesheets/styles.css?1271190684 */
+
+
+* {
+	clear: both;
+}
+
+body {
+	width: 800px;
+	height: 1040px;
+	margin: auto;
+	margin-top: 5px;
+	font-size: 22px;
+	text-align: center;
+	overflow-y: hidden;
+	background: url(../images/45-bg.png) repeat;
+}
+
+#wrap {
+	/*clear: none;*/
+	width:760px;
+	margin: -10px auto auto auto;
+	background: green;
+	-webkit-box-shadow: 0px 1px 8px black;
+	-moz-box-shadow: 0px 1px 5px black;
+}
+
+#header {
+	background: blue;
+}
+
+#sites {
+	background: saddlebrown;
+}
+
+#navigation {
+	background: orange;
+}
+
+.fullname {
+	font-size: 60px;
+}
+
+.lurkiturl {
+	font-size: 26px;
+}
+
+#navigation a {
+	text-decoration: none;
+}
+
+#navigation a:hover {
+	text-decoration: underline;
+}
+form #formcontrols {
+	width: 300px;
+	margin: auto;
+}
+
+form  #formcontrols input, select {
+	float: right;
+	font-size: 20px;
+	width: 150px;
+}
+form input {
+	width: 200px;
+
+}
+
+input:focus {
+	background: #ecffca;
+}
+
+#banner {
+	margin:auto;
+	width: 800px;
+	height: 30px;
+	background: rgb(64,64,64);
+	-webkit-box-shadow: 0px 1px 8px black;
+	-moz-box-shadow: 0px 1px 5px black;
+	z-index: 100;
+	position: absolute;
+}
+
+#leftslant {
+	top: 35px;
+	float: left;
+	width: 0px;
+	border-color: rgb(40,40,40) rgb(40,40,40) transparent transparent;
+	border-style: solid;
+	border-width: 10px;
+	position: absolute;
+}
+
+#rightslant {
+	top:  30px;
+	float: right;
+	width: 0px;
+	border-color: rgb(40,40,40) transparent transparent rgb(40,40,40);
+	border-style: solid;
+	border-width: 10px;
+	position: relative;
+}
