@@ -1,5 +1,7 @@
 <title>Lurk.it - Edit - <%= full_name(@person.firstname, @person.lastname)%></title>
 <%= form_tag :action => 'update', :id => @person.id %>
 <%= render :partial => 'person' %>
-<%= submit_tag "Submit" %>
-<%= link_to 'Back', {:action => 'index'}%>
+<%= submit_tag "Update" %>
+<div id="navigation">
+	<%= link_to 'Back', {:action => 'index'}%>
+</div>
