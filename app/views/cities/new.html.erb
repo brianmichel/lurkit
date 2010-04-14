@@ -1,18 +1,21 @@
 <title>Add City</title>
 <h1>Add A New City!</h1>
 <%= form_tag :action => 'create' %>
-<p>
-	<label for="name">City Name</label>:
-	<%= text_field 'city', 'name'%>
-</p>
-<p>
-	<label for="latitude">City Latitude</label>:
-	<%= text_field 'city', 'latitude'%>
-</p>
-<p>
-	<label for="longitude">City Longitude</label>:
-	<%= text_field 'city', 'longitude'%>
-</p>
-
+<div id="formcontrols">
+	<p>
+		<label for="name">City Name</label>:
+		<%= text_field 'city', 'name'%>
+	</p>
+	<p>
+		<label for="latitude">Latitude</label>:
+		<%= text_field 'city', 'latitude'%>
+	</p>
+	<p>
+		<label for="longitude">Longitude</label>:
+		<%= text_field 'city', 'longitude'%>
+	</p>
+</div>
 <%= submit_tag "Create"%>
-<%= link_to 'Back', {:controller => 'people', :action => 'index'}%>
+<div id="navigation">
+	<%= link_to 'Back', {:controller => 'people', :action => 'index'}%>
+</div>
