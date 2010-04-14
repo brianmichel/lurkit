@@ -1,0 +1,14 @@
+<% if @people.blank? %>
+	<p>There aren't any people in here!</p>
+<% else %>
+<p>These people are available to be lurked</p>
+<ul id="people">
+	<% @people.each do |c| %>
+	<li><%= link_to full_name(c.firstname, c.lastname), {:action => 'show', :id => c.id} -%> - <span class="twitterurl"><%= link_to "tw", twitter_url(c.twittername)%></span> | <span class="tumblrurl"><%= link_to "tm", tumblr_url(c.tumblrname)%></li>
+	<% end %>
+</ul>
+<% end %>
+<div id="navigation">
+	<%= link_to "Back", {:action => 'index'} %>
+</div>
+	
