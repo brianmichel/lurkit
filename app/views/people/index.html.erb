@@ -1,6 +1,7 @@
 <title>Lurk.it People Listing</title>
 <h1>What Would You Like To Do?</h1>
 <div id="navigation">
+	<%= link_to "Start Lurking!", {:action => 'list'}%>
 	<%= link_to "New Person", {:action => 'new'}%>
 	<%= link_to "New City", {:controller => 'cities', :action => 'new'}%>
 </div>

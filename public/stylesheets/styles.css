@@ -1,3 +1,11 @@
+/* @override http://localhost:3000/stylesheets/styles.css?1271210706 */
+
+/* @override http://localhost:3000/stylesheets/styles.css?1271210388 */
+
+/* @override http://localhost:3000/stylesheets/styles.css?1271210220 */
+
+/* @override http://localhost:3000/stylesheets/styles.css?1271193102 */
+
 /* @override http://localhost:3000/stylesheets/styles.css?1271190684 */
 
 
@@ -14,15 +22,19 @@ body {
 	text-align: center;
 	overflow-y: hidden;
 	background: url(../images/45-bg.png) repeat;
+	position: relative;
 }
 
 #wrap {
-	/*clear: none;*/
 	width:760px;
-	margin: -10px auto auto auto;
+	margin: auto auto auto auto;
 	background: green;
 	-webkit-box-shadow: 0px 1px 8px black;
 	-moz-box-shadow: 0px 1px 5px black;
+	position: relative;
+	padding-top: 5px;
+	z-index: 1;
+	
 }
 
 #header {
@@ -72,18 +84,18 @@ input:focus {
 }
 
 #banner {
-	margin:auto;
+	margin:auto auto -22px auto;
 	width: 800px;
 	height: 30px;
 	background: rgb(64,64,64);
 	-webkit-box-shadow: 0px 1px 8px black;
 	-moz-box-shadow: 0px 1px 5px black;
-	z-index: 100;
 	position: absolute;
+	z-index: 100;
 }
 
 #leftslant {
-	top: 35px;
+	top: 30px;
 	float: left;
 	width: 0px;
 	border-color: rgb(40,40,40) rgb(40,40,40) transparent transparent;
@@ -100,4 +112,17 @@ input:focus {
 	border-style: solid;
 	border-width: 10px;
 	position: relative;
+}
+
+#people {
+	width: 400px;
+	margin: auto auto auto auto;
+	list-style: none;
+	text-decoration: none;
+}
+
+#people li, #people li a {
+	font-size: 30px;
+	text-decoration: none;
+	
 }
